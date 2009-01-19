@@ -27,7 +27,7 @@
 ;;(load-file "~/.emacs.d/themes/color-theme-blackboard.el")
 
 ;; Ruby Electric Mode
-(ruby-electric-mode)
+;;(ruby-electric-mode)
 
 
 ;(add-to-list 'load-path (concat dotfiles-dir "vendor/color-theme))
