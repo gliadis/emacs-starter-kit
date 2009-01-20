@@ -16,9 +16,6 @@
 (global-set-key [s-up] 'drag-line-up)
 (global-set-key [s-down] 'drag-line-down)
 
-;; Font
-(set-face-font 'default "-xos4-terminus-medium-*-100-iso10646-1")
-
 ;; Color Themes
 ;;(color-theme-zenburn)
 ;;(require 'color-theme)
@@ -27,8 +24,7 @@
 ;;(load-file "~/.emacs.d/themes/color-theme-blackboard.el")
 
 ;; Ruby Electric Mode
-(ruby-electric-mode)
-
+;;(ruby-electric-mode)
 
 ;(add-to-list 'load-path (concat dotfiles-dir "vendor/color-theme))
 ;(require 'color-theme)
