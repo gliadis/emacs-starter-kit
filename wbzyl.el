@@ -18,6 +18,9 @@
 
 (add-to-list 'auto-mode-alist '("\\.maruku$" . markdown-mode))
 
+;; reset the default binding
+(global-set-key (kbd "C-x h") 'mark-whole-buffer)
+
 ;; Snippets
 ;(add-to-list 'load-path "~/emacs.d/vendor/yasnippet")
 ;(require 'yasnippet)
