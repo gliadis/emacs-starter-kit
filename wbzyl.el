@@ -20,6 +20,7 @@
 
 ;; reset the default binding
 (global-set-key (kbd "C-x h") 'mark-whole-buffer)
+;;(global-set-key (kbd "M-q") 'fill-paragraph)
 
 ;; Snippets
 ;(add-to-list 'load-path "~/emacs.d/vendor/yasnippet")
