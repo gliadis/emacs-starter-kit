@@ -19,7 +19,7 @@
 (add-to-list 'auto-mode-alist '("\\.maruku$" . markdown-mode))
 
 ;; reset the default binding
-(global-set-key (kbd "C-x h") 'mark-whole-buffer)
+(global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
 ;;(global-set-key (kbd "M-q") 'fill-paragraph)
 
 ;; Snippets
