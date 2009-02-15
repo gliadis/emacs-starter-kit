@@ -16,12 +16,17 @@
 (global-set-key [s-up] 'drag-line-up)
 (global-set-key [s-down] 'drag-line-down)
 
-;; Color Themes
-;;(color-theme-zenburn)
-;;(require 'color-theme)
-;;(color-theme-blackboard)
-;;(color-theme-zenburn)
-;;(load-file "~/.emacs.d/themes/color-theme-blackboard.el")
+(add-to-list 'auto-mode-alist '("\\.maruku$" . markdown-mode))
+
+;; reset the default binding
+(global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
+;;(global-set-key (kbd "M-q") 'fill-paragraph)
+
+;; Snippets
+;(add-to-list 'load-path "~/emacs.d/vendor/yasnippet")
+;(require 'yasnippet)
+;(yas/initialize)
+;(yas/load-directory "~/emacs.d/vendor/yasnippet/snippets")
 
 ;; Ruby Electric Mode
 ;;(ruby-electric-mode)
@@ -30,9 +35,3 @@
 ;(require 'color-theme)
 ;(color-theme-initialize)
 ;(color-theme-charcoal-black)
-
-;; Snippets
-;(add-to-list 'load-path "~/emacs.d/vendor/yasnippet")
-;(require 'yasnippet)
-;(yas/initialize)
-;(yas/load-directory "~/emacs.d/vendor/yasnippet/snippets")

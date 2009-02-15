@@ -70,10 +70,10 @@
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'textile-mode-hook 'auto-fill-mode)
-(add-hook 'textile-mode-hook 'flyspell-mode)
-(add-hook 'markdown-mode-hook 'auto-fill-mode)
-(add-hook 'markdown-mode-hook 'flyspell-mode)
+;;(add-hook 'textile-mode-hook 'auto-fill-mode)
+;;(add-hook 'textile-mode-hook 'flyspell-mode)
+;;(add-hook 'markdown-mode-hook 'auto-fill-mode)
+;;(add-hook 'markdown-mode-hook 'flyspell-mode)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (random t) ;; Seed the random-number generator
@@ -120,3 +120,4 @@
 
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here
+
