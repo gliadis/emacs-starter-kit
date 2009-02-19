@@ -69,7 +69,7 @@
 (set-default 'imenu-auto-rescan t)
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
-(add-hook 'text-mode-hook 'flyspell-mode)
+;;(add-hook 'text-mode-hook 'flyspell-mode)
 ;;(add-hook 'textile-mode-hook 'auto-fill-mode)
 ;;(add-hook 'textile-mode-hook 'flyspell-mode)
 ;;(add-hook 'markdown-mode-hook 'auto-fill-mode)
@@ -98,6 +98,7 @@
 (add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
