@@ -13,12 +13,13 @@
   (interactive)
   (recenter 0))
 
+;; My key bindings
 (global-set-key [s-up] 'drag-line-up)
 (global-set-key [s-down] 'drag-line-down)
+(global-set-key [f12] 'delete-window)
+(global-set-key [s-left] 'delete-window)
 
-(add-to-list 'auto-mode-alist '("\\.maruku$" . markdown-mode))
-
-;; reset the default binding
+;; Reset the default binding
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
 ;;(global-set-key (kbd "M-q") 'fill-paragraph)
 
