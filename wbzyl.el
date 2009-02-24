@@ -1,5 +1,7 @@
-;; Scrolling
+;; Minor modes
+(column-number-mode)
 
+;; Scrolling
 (defun drag-line-up ()
   "Scroll current line one line up."
   (interactive)
