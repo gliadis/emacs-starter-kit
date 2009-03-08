@@ -1,5 +1,7 @@
 ;; Minor modes
 (column-number-mode)
+(color-theme-blackboard)
+;;(color-theme-zenburn)
 
 ;; Scrolling
 (defun drag-line-up ()
