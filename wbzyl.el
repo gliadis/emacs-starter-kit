@@ -1,5 +1,7 @@
 ;; Minor modes
 (column-number-mode)
+(color-theme-blackboard)
+;;(color-theme-zenburn)
 
 ;; Disable sup/sub script raising/lowering
 ;;(eval-after-load "tex-mode" '(fset 'tex-font-lock-suscript 'ignore))
