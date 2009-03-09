@@ -1,6 +1,9 @@
 ;; Minor modes
 (column-number-mode)
 
+;; Disable sup/sub script raising/lowering
+(eval-after-load "tex-mode" '(fset 'tex-font-lock-suscript 'ignore))
+
 ;; Scrolling
 (defun drag-line-up ()
   "Scroll current line one line up."
