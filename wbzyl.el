@@ -2,7 +2,10 @@
 (column-number-mode)
 
 ;; Disable sup/sub script raising/lowering
-(eval-after-load "tex-mode" '(fset 'tex-font-lock-suscript 'ignore))
+;;(eval-after-load "tex-mode" '(fset 'tex-font-lock-suscript 'ignore))
+(eval-after-load 'tex-mode
+  '(progn
+     (fset 'tex-font-lock-suscript 'ignore)))
 
 ;; Scrolling
 (defun drag-line-up ()
