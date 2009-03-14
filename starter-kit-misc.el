@@ -70,12 +70,15 @@
 
 ;; Hooks
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
-(add-hook 'text-mode-hook 'auto-fill-mode)
+;;(add-hook 'text-mode-hook 'auto-fill-mode)
 ;;(add-hook 'textile-mode-hook 'flyspell-mode)
 ;;(add-hook 'markdown-mode-hook 'auto-fill-mode)
 ;;(add-hook 'markdown-mode-hook 'flyspell-mode)
 ;;(add-hook 'text-mode-hook (lambda () (auto-fill-mode 1)))
 ;;(add-hook 'text-mode-hook (lambda () (flyspell-mode 1)))
+
+(defvar coding-hook nil
+  "Hook that gets run on activation of any programming mode.")
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (random t) ;; Seed the random-number generator
@@ -106,6 +109,9 @@
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\\.erb$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.maruku$" . markdown-mode))
+
+;; Default to unified diffs
+(setq diff-switches "-u")
 
 ;; Cosmetics
 
