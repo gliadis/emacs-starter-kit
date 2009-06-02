@@ -35,17 +35,30 @@
 (global-set-key [(s down)] 'drag-line-down)
 
 (global-set-key [(s ?h)] 'ucs-insert)
-(global-set-key [(s ?-)] '(lambda () (interactive) (ucs-insert "2013"))) ; półpauza
-(global-set-key [(s ?=)] '(lambda () (interactive) (ucs-insert "2014"))) ; pauza
-(global-set-key [(s ?.)] '(lambda () (interactive) (ucs-insert "2026"))) ; wielokropek
+;; (global-set-key [(s ?-)] '(lambda () (interactive) (ucs-insert "2013"))) ; półpauza
+;; (global-set-key [(s ?=)] '(lambda () (interactive) (ucs-insert "2014"))) ; pauza
+;; (global-set-key [(s ?.)] '(lambda () (interactive) (ucs-insert "2026"))) ; wielokropek
 
-(global-set-key [(s ?,)] '(lambda () (interactive) (ucs-insert "201e"))) ; „
-(global-set-key [(s ?')] '(lambda () (interactive) (ucs-insert "201d"))) ; ”
+;; (global-set-key [(s ?,)] '(lambda () (interactive) (ucs-insert "201e"))) ; „
+;; (global-set-key [(s ?')] '(lambda () (interactive) (ucs-insert "201d"))) ; ”
 
-(global-set-key [(s ?[)] '(lambda () (interactive) (ucs-insert "00ab"))) ; «
-(global-set-key [(s ?])] '(lambda () (interactive) (ucs-insert "00bb"))) ; »
+;; (global-set-key [(s ?[)] '(lambda () (interactive) (ucs-insert "00ab"))) ; «
+;; (global-set-key [(s ?])] '(lambda () (interactive) (ucs-insert "00bb"))) ; »
 
-(global-set-key [(s ?])] '(lambda () (interactive) (ucs-insert "2030"))) ; ‰
+(global-set-key [(s ?-)] '(lambda () (interactive) (insert-char ?– 1)))
+(global-set-key [(s ?=)] '(lambda () (interactive) (insert-char ?— 1)))
+(global-set-key [(s ?.)] '(lambda () (interactive) (insert-char ?… 1)))
+
+(global-set-key [(s ?,)] '(lambda () (interactive) (insert-char ?„ 1)))
+(global-set-key [(s ?')] '(lambda () (interactive) (insert-char ?” 1)))
+
+(global-set-key [(s ?[)] '(lambda () (interactive) (insert-char ?« 1)))
+(global-set-key [(s ?])] '(lambda () (interactive) (insert-char ?» 1)))
+
+(global-set-key [(s ?8)] '(lambda () (interactive) (insert-char ?× 1)))
+(global-set-key [(s ?9)] '(lambda () (interactive) (insert-char ?÷ 1)))
+(global-set-key [(s ?5)] '(lambda () (interactive) (insert-char ?€ 1)))
+(global-set-key [(s ?2)] '(lambda () (interactive) (insert-char ?© 1)))
 
 ;;(global-set-key [(control shift ...)] '...)
 
