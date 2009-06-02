@@ -24,10 +24,30 @@
   (recenter 0))
 
 ;; My key bindings
-(global-set-key [s-up] 'drag-line-up)
-(global-set-key [s-down] 'drag-line-down)
-(global-set-key [f12] 'delete-window)
-(global-set-key [s-left] 'delete-window)
+
+;; old syntax
+;;(global-set-key [s-up] 'drag-line-up)
+;;(global-set-key [s-down] 'drag-line-down)
+;;(global-set-key [f12] 'delete-window)
+;;(global-set-key [s-left] 'delete-window)
+
+(global-set-key [(s up)] 'drag-line-up)
+(global-set-key [(s down)] 'drag-line-down)
+
+(global-set-key [(s ?h)] 'ucs-insert)
+(global-set-key [(s ?-)] '(lambda () (interactive) (ucs-insert "2013"))) ; półpauza
+(global-set-key [(s ?=)] '(lambda () (interactive) (ucs-insert "2014"))) ; pauza
+(global-set-key [(s ?.)] '(lambda () (interactive) (ucs-insert "2026"))) ; wielokropek
+
+(global-set-key [(s ?,)] '(lambda () (interactive) (ucs-insert "201e"))) ; „
+(global-set-key [(s ?')] '(lambda () (interactive) (ucs-insert "201d"))) ; ”
+
+(global-set-key [(s ?[)] '(lambda () (interactive) (ucs-insert "00ab"))) ; «
+(global-set-key [(s ?])] '(lambda () (interactive) (ucs-insert "00bb"))) ; »
+
+(global-set-key [(s ?])] '(lambda () (interactive) (ucs-insert "2030"))) ; ‰
+
+;;(global-set-key [(control shift ...)] '...)
 
 ;; Reset the default binding
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
@@ -40,3 +60,5 @@
   (insert "end")
   (ruby-indent-line t)
   (end-of-line))
+
+(server-start)
