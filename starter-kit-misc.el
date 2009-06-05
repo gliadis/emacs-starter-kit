@@ -109,6 +109,7 @@
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\\.erb$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.maruku$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.rdiscount$" . markdown-mode))
 
 ;; Default to unified diffs
 (setq diff-switches "-u")
