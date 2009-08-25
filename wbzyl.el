@@ -9,6 +9,11 @@
   '(progn
      (fset 'tex-font-lock-suscript 'ignore)))
 
+
+(add-hook 'ruby-mode-hook
+  (lambda ()
+    (setq outline-regexp "^\\(class\\|module\\) +")))
+
 ;; Scrolling
 (defun drag-line-up ()
   "Scroll current line one line up."
@@ -25,7 +30,11 @@
 
 ;; My key bindings
 
+;; (global-set-key "M-x ;" 'comment-dwim)
+(global-set-key [(s ?3)] 'comment-region)
+
 ;; old syntax
+
 ;;(global-set-key [s-up] 'drag-line-up)
 ;;(global-set-key [s-down] 'drag-line-down)
 ;;(global-set-key [f12] 'delete-window)
