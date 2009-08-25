@@ -28,7 +28,7 @@
   (interactive)
   (recenter 0))
 
-;; My key bindings
+;; My key bindings and other stuff
 
 ;; (global-set-key "M-x ;" 'comment-dwim)
 (global-set-key [(s ?3)] 'comment-region)
@@ -75,12 +75,15 @@
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
 ;;(global-set-key (kbd "M-q") 'fill-paragraph)
 
+(add-to-list 'auto-mode-alist '("\\.rdiscount$" . markdown-mode))
+
 ;; Bug in Ruby (Electric)? Mode
-(defun ruby-insert-end ()
-  "Insert \"end\" at point and reindent current line."
-  (interactive)
-  (insert "end")
-  (ruby-indent-line t)
-  (end-of-line))
+
+;; (defun ruby-insert-end ()
+;;   "Insert \"end\" at point and reindent current line."
+;;   (interactive)
+;;   (insert "end")
+;;   (ruby-indent-line t)
+;;   (end-of-line))
 
 (server-start)
