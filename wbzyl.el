@@ -33,6 +33,11 @@
 ;; (global-set-key "M-x ;" 'comment-dwim)
 (global-set-key [(s ?3)] 'comment-region)
 
+;; color mode used during lectures
+(global-set-key [(s ?1)] 'color-theme-standard)
+;; switch to bold font: shift + left-mouse and courier 18 bold
+(global-set-key [(s ?2)] 'color-theme-blackboard)
+
 ;; old syntax
 
 ;;(global-set-key [s-up] 'drag-line-up)
