@@ -81,6 +81,8 @@
 ;;(global-set-key (kbd "M-q") 'fill-paragraph)
 
 (add-to-list 'auto-mode-alist '("\\.rdiscount$" . markdown-mode))
+;; TAB doesn't work with markdown-mode
+(global-set-key [s-right] 'yas/expand)
 
 ;; Bug in Ruby (Electric)? Mode
 
