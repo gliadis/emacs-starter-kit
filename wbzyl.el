@@ -9,7 +9,6 @@
   '(progn
      (fset 'tex-font-lock-suscript 'ignore)))
 
-
 (add-hook 'ruby-mode-hook
   (lambda ()
     (setq outline-regexp "^\\(class\\|module\\) +")))
@@ -31,12 +30,19 @@
 ;; My key bindings and other stuff
 
 ;; (global-set-key "M-x ;" 'comment-dwim)
+
+;; switch to bold font: shift + left-mouse and courier 18 bold
+
+(global-set-key [(s ?1)] 'color-theme-standard)
+(global-set-key [(s ?2)] 'color-theme-blackboard)
 (global-set-key [(s ?3)] 'comment-region)
 
-;; color mode used during lectures
-(global-set-key [(s ?1)] 'color-theme-standard)
-;; switch to bold font: shift + left-mouse and courier 18 bold
-(global-set-key [(s ?2)] 'color-theme-blackboard)
+(global-set-key [(s up)] 'drag-line-up)
+(global-set-key [(s down)] 'drag-line-down)
+
+(global-set-key [(s ?h)] 'ucs-insert)
+
+(global-set-key [s-right] 'yas/expand) ; TAB doesn't work in markdown mode
 
 ;; old syntax
 
@@ -45,10 +51,6 @@
 ;;(global-set-key [f12] 'delete-window)
 ;;(global-set-key [s-left] 'delete-window)
 
-(global-set-key [(s up)] 'drag-line-up)
-(global-set-key [(s down)] 'drag-line-down)
-
-(global-set-key [(s ?h)] 'ucs-insert)
 ;; (global-set-key [(s ?-)] '(lambda () (interactive) (ucs-insert "2013"))) ; półpauza
 ;; (global-set-key [(s ?=)] '(lambda () (interactive) (ucs-insert "2014"))) ; pauza
 ;; (global-set-key [(s ?.)] '(lambda () (interactive) (ucs-insert "2026"))) ; wielokropek
@@ -59,30 +61,24 @@
 ;; (global-set-key [(s ?[)] '(lambda () (interactive) (ucs-insert "00ab"))) ; «
 ;; (global-set-key [(s ?])] '(lambda () (interactive) (ucs-insert "00bb"))) ; »
 
-(global-set-key [(s ?-)] '(lambda () (interactive) (insert-char ?– 1)))
-(global-set-key [(s ?=)] '(lambda () (interactive) (insert-char ?— 1)))
-(global-set-key [(s ?.)] '(lambda () (interactive) (insert-char ?… 1)))
+;; (global-set-key [(s ?-)] '(lambda () (interactive) (insert-char ?– 1)))
+;; (global-set-key [(s ?=)] '(lambda () (interactive) (insert-char ?— 1)))
+;; (global-set-key [(s ?.)] '(lambda () (interactive) (insert-char ?… 1)))
 
-(global-set-key [(s ?,)] '(lambda () (interactive) (insert-char ?„ 1)))
-(global-set-key [(s ?')] '(lambda () (interactive) (insert-char ?” 1)))
+;; (global-set-key [(s ?,)] '(lambda () (interactive) (insert-char ?„ 1)))
+;; (global-set-key [(s ?')] '(lambda () (interactive) (insert-char ?” 1)))
 
-(global-set-key [(s ?[)] '(lambda () (interactive) (insert-char ?« 1)))
-(global-set-key [(s ?])] '(lambda () (interactive) (insert-char ?» 1)))
+;; (global-set-key [(s ?[)] '(lambda () (interactive) (insert-char ?« 1)))
+;; (global-set-key [(s ?])] '(lambda () (interactive) (insert-char ?» 1)))
 
-(global-set-key [(s ?8)] '(lambda () (interactive) (insert-char ?× 1)))
-(global-set-key [(s ?9)] '(lambda () (interactive) (insert-char ?÷ 1)))
-(global-set-key [(s ?5)] '(lambda () (interactive) (insert-char ?€ 1)))
-(global-set-key [(s ?2)] '(lambda () (interactive) (insert-char ?© 1)))
-
-;;(global-set-key [(control shift ...)] '...)
+;; (global-set-key [(s ?8)] '(lambda () (interactive) (insert-char ?× 1)))
+;; (global-set-key [(s ?9)] '(lambda () (interactive) (insert-char ?÷ 1)))
+;;(global-set-key [(s ?5)] '(lambda () (interactive) (insert-char ?€ 1)))
+;;(global-set-key [(s ?2)] '(lambda () (interactive) (insert-char ?© 1)))
 
 ;; Reset the default binding
 (global-set-key (kbd "C-x C-h") 'mark-whole-buffer)
 ;;(global-set-key (kbd "M-q") 'fill-paragraph)
-
-(add-to-list 'auto-mode-alist '("\\.rdiscount$" . markdown-mode))
-;; TAB doesn't work with markdown-mode
-(global-set-key [s-right] 'yas/expand)
 
 ;; Bug in Ruby (Electric)? Mode
 
