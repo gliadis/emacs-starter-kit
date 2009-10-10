@@ -89,4 +89,7 @@
 ;;   (ruby-indent-line t)
 ;;   (end-of-line))
 
+(setq yas/root-directory "~/.emacs.d/snippets")
+(yas/load-directory yas/root-directory)
+
 (server-start)
